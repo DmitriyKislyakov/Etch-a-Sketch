@@ -1,3 +1,12 @@
+* {
+  text-align-last: center;
+}
+
+.screen {
+  display: flex;
+  justify-content: center;
+}
+
 .container {
   border: 1px solid black;
   width: 800px;
@@ -14,4 +23,28 @@
   border: 1px solid lightgrey;
   background-color: whitesmoke;
   flex: auto;
+}
+
+.cell:hover {
+  background-color: gray;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 64px;
+  margin: 16px;
+  margin-top: 32px;
+}
+
+button {
+  padding: 16px;
+  border-radius: 50%;
+  width: 85px;
+  height: 85px;
+  font-size: large;
+  text-align-last: center;
+  background-color: rgb(39, 126, 214);
+  color: whitesmoke;
+  font-weight: bold;
 }
