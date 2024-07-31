@@ -1,0 +1,17 @@
+.container {
+  border: 1px solid black;
+  width: 800px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex: auto;
+}
+.cell {
+  border: 1px solid lightgrey;
+  background-color: whitesmoke;
+  flex: auto;
+}
