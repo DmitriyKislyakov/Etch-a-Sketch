@@ -80,7 +80,7 @@ rgb.addEventListener('click', rgbFunction)
 
 function darkOpacity() {
   let n = 0
-  if (n <= 1) n = n + 0.1
+  if (n <= 1) n = n + 0.3
   return n
 }
 
@@ -96,7 +96,7 @@ function darkFunction() {
       row.appendChild(cell)
       cell.addEventListener('mousemove', (e) => {
         e.target.style.background = 'gray'
-        e.target.style.opacity = darkOpacity()
+        e.target.style.opacity = `${Math.random()}`
       })
     }
   }
