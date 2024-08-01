@@ -53,3 +53,54 @@ function resizeFunction() {
 
 const resize = document.querySelector('#resize')
 resize.addEventListener('click', resizeFunction)
+
+function randomColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`
+}
+
+function rgbFunction() {
+  container.innerHTML = ''
+  for (let i = 0; i < cellCount; i++) {
+    let row = document.createElement('div')
+    row.classList.add('row')
+    container.appendChild(row)
+    for (let j = 0; j < cellCount; j++) {
+      let cell = document.createElement('div')
+      cell.classList.add('cell')
+      row.appendChild(cell)
+      cell.addEventListener('mousemove', (e) => {
+        e.target.style.background = randomColor()
+      })
+    }
+  }
+}
+
+const rgb = document.querySelector('#rgb')
+rgb.addEventListener('click', rgbFunction)
+
+function darkOpacity() {
+  let n = 0
+  if (n <= 1) n = n + 0.1
+  return n
+}
+
+function darkFunction() {
+  container.innerHTML = ''
+  for (let i = 0; i < cellCount; i++) {
+    let row = document.createElement('div')
+    row.classList.add('row')
+    container.appendChild(row)
+    for (let j = 0; j < cellCount; j++) {
+      let cell = document.createElement('div')
+      cell.classList.add('cell')
+      row.appendChild(cell)
+      cell.addEventListener('mousemove', (e) => {
+        e.target.style.background = 'gray'
+        e.target.style.opacity = darkOpacity()
+      })
+    }
+  }
+}
+
+const dark = document.querySelector('#dark')
+dark.addEventListener('click', darkFunction)
